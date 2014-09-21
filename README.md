@@ -60,7 +60,7 @@ It doesn't look that beautiful, however, we want to give our columns descriptive
 names. Well people who are already familier with the original source dataset will have it easier. 
 It is also better for communication when people who only got the new dataset
 want to communicate with the original creators of the source dataset. 
-If the have questions the can simply give them the complete column name: ex. "tBodyAcc-mean()-X" 
+If they have questions they can simply give them the complete column name: ex. "tBodyAcc-mean()-X" 
 and the engineer knows exactly what they mean. 
 Also if you want to change the names of the columns you don't have to change the run_analysis.r
 script, only the features.txt file.
