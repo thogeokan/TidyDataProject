@@ -13,7 +13,7 @@ library(dplyr)
 ###
 
 fileURL <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
-fileName <- "data/Dataset.zip"
+fileName <- "Dataset.zip"
 
 
 # create data directory if does not exist already
@@ -32,26 +32,25 @@ if (!file.exists(fileName)) {
 ###
 
 # UNZIP
-setwd("./data/")
 unzip("./Dataset.zip")
-setwd("..")
+
 
 # Load the datatables:
 
-# datadir  <- "data/UCI HAR Dataset/"
+# datadir  <- "UCI HAR Dataset/"
 
 # tbl_df is actually not needed, but the tables look nicer when you have a look at them
-subject_train  <- tbl_df(read.table("data/UCI HAR Dataset/train/subject_train.txt"))
-subject_test  <- tbl_df(read.table("data/UCI HAR Dataset/test/subject_test.txt"))
+subject_train  <- tbl_df(read.table("UCI HAR Dataset/train/subject_train.txt"))
+subject_test  <- tbl_df(read.table("UCI HAR Dataset/test/subject_test.txt"))
 
-x_train  <- tbl_df(read.table("data/UCI HAR Dataset/train/X_train.txt"))
-x_test <- tbl_df(read.table("data/UCI HAR Dataset/test/X_test.txt"))
+x_train  <- tbl_df(read.table("UCI HAR Dataset/train/X_train.txt"))
+x_test <- tbl_df(read.table("UCI HAR Dataset/test/X_test.txt"))
 
-y_train  <- tbl_df(read.table("data/UCI HAR Dataset/train/y_train.txt"))
-y_test <- tbl_df(read.table("data/UCI HAR Dataset/test/y_test.txt"))
+y_train  <- tbl_df(read.table("UCI HAR Dataset/train/y_train.txt"))
+y_test <- tbl_df(read.table("UCI HAR Dataset/test/y_test.txt"))
 
-act_label  <- tbl_df(read.table("data/UCI HAR Dataset/activity_labels.txt"))
-features  <- tbl_df(read.table("data/UCI HAR Dataset/features.txt"))
+act_label  <- tbl_df(read.table("UCI HAR Dataset/activity_labels.txt"))
+features  <- tbl_df(read.table("UCI HAR Dataset/features.txt"))
 
 
 ###
@@ -138,10 +137,10 @@ tt2  <- tt1 %>% group_by(ACTIVITY) %>% summarise_each(funs(mean))
 #  Save files
 ###
 # The full dataset of MEANs, STDs and ACTIVITY
-write.table(tidy_table_lab3, "data/tidyData1.txt" )
+write.table(tidy_table_lab3, "data/tidyData1.txt", row.name=FALSE )
 
 # The summarized dataset of MEAN's and STD's  of each ACTIVITY
-write.table(tt2, "data/tidyData2.txt" )
+write.table(tt2, "data/tidyData2.txt",row.name=FALSE )
 
 
 
