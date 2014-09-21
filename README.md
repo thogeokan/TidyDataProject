@@ -28,19 +28,19 @@ Following will take place in the current working directory (of R):
 3. Dataset.zip is unzipped and the folder "UCI HAR Dataset" is generated. 
 
 4. Reading of data tables into R:
-	a. X_test.txt, y_test.txt, X_train.txt, y_train.txt: These files contain the feature column (X) and 
+	* X_test.txt, y_test.txt, X_train.txt, y_train.txt: These files contain the feature column (X) and 
 	the mapping (y).
-	b. subject_test.txt and subject_train.txt are also included, though their data will not 
+	* subject_test.txt and subject_train.txt are also included, though their data will not 
 	be used in the final datasets.
 	
-	c. activity_labels.txt: This file contain the ACTIVITY labels we will use.
-	d. features.txt: This file has the feature column names(for the X_*.txt files).
+	* activity_labels.txt: This file contain the ACTIVITY labels we will use.
+	* features.txt: This file has the feature column names(for the X_*.txt files).
 	
 5. We give our data tables their header names. x_train and x_test get their names from "features".
 6. Merging data tables together:
-	a) First y_train, subject_train and x_train as one "train" table 
+	* First y_train, subject_train and x_train as one "train" table 
 	and y_test, subject_test and x_test as one "test" table.
-	b) Then we combine test and train tables(rbind) in a "big_table".
+	* Then we combine test and train tables(rbind) in a "big_table".
 7. We only want mean and std columns so we search with grep() in the features table
    for only the names which have "mean" or "std" in them.
 8. With the information from 7) we can select all columns we are interested in.
