@@ -28,13 +28,13 @@ Following will take place in the current working directory (of R):
 3. Dataset.zip is unzipped and the folder "UCI HAR Dataset" is generated. 
 
 4. Reading of data tables into R:
-	a) X_test.txt, y_test.txt, X_train.txt, y_train.txt: These files contain the feature column (X) and 
+	a. X_test.txt, y_test.txt, X_train.txt, y_train.txt: These files contain the feature column (X) and 
 	the mapping (y).
-	b) subject_test.txt and subject_train.txt are also included, though their data will not 
+	b. subject_test.txt and subject_train.txt are also included, though their data will not 
 	be used in the final datasets.
 	
-	c) activity_labels.txt: This file contain the ACTIVITY labels we will use.
-	d) features.txt: This file has the feature column names(for the X_*.txt files).
+	c. activity_labels.txt: This file contain the ACTIVITY labels we will use.
+	d. features.txt: This file has the feature column names(for the X_*.txt files).
 	
 5. We give our data tables their header names. x_train and x_test get their names from "features".
 6. Merging data tables together:
